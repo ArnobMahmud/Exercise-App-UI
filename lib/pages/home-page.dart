@@ -7,12 +7,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    //var width = MediaQuery.of(context).size.width;
     return Scaffold(
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-        height: 70,
-        color: Colors.white,
+        decoration: BoxDecoration(
+            color: Color(0xFFF5CEB8),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            )),
+        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
+        height: 60,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -40,6 +45,9 @@ class HomePage extends StatelessWidget {
           Container(
             height: height * 0.55,
             decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
                 color: Color(0xFFF5CEB8),
                 image: DecorationImage(
                     alignment: Alignment.centerLeft,
@@ -57,8 +65,8 @@ class HomePage extends StatelessWidget {
                     alignment: Alignment.topRight,
                     child: Container(
                       alignment: Alignment.center,
-                      height: 50,
-                      width: 50,
+                      height: 45,
+                      width: 45,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Color(0xFFF2BEA1),
@@ -67,12 +75,15 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Good Morning \nArnob",
+                    "Good Morning \nOvi",
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+                        TextStyle(
+                         fontWeight: FontWeight.bold,
+                         fontSize: 30.0,
+                         color: Colors.purple),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 20.0),
+                    margin: EdgeInsets.symmetric(vertical: 10.0),
                     padding:
                         EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                     decoration: BoxDecoration(
