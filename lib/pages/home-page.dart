@@ -94,12 +94,7 @@ class HomePage extends StatelessWidget {
                         CategoryCard(
                           title: "Diet Recommendation",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => DetailsPage()));
-                          },
+                          onPressed: () {},
                         ),
                         CategoryCard(
                           title: "Kegel Exercise",
@@ -109,7 +104,12 @@ class HomePage extends StatelessWidget {
                         CategoryCard(
                           title: "Meditation",
                           svgSrc: "assets/icons/Meditation.svg",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailsPage()));
+                          },
                         ),
                         CategoryCard(
                           title: "Yoga",
