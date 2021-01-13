@@ -1,5 +1,7 @@
+import 'package:exercise_app_ui/pages/details-page.dart';
 import 'package:exercise_app_ui/widgets/BottomNavBar.dart';
 import 'package:exercise_app_ui/widgets/CategoryCard.dart';
+import 'package:exercise_app_ui/widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -75,28 +77,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Good Morning \nOvi",
-                    style:
-                        TextStyle(
-                         fontWeight: FontWeight.bold,
-                         fontSize: 30.0,
-                         color: Colors.purple),
+                    "Good Morning \nArnob",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30.0,
+                        color: Colors.purple),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 10.0),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30.0)),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          icon: SvgPicture.asset("assets/icons/search.svg"),
-                          hintText: "Search",
-                          hintStyle: TextStyle(fontSize: 20.0),
-                          border: InputBorder.none),
-                    ),
-                  ),
+                  SearchBar(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
@@ -107,7 +94,12 @@ class HomePage extends StatelessWidget {
                         CategoryCard(
                           title: "Diet Recommendation",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailsPage()));
+                          },
                         ),
                         CategoryCard(
                           title: "Kegel Exercise",
