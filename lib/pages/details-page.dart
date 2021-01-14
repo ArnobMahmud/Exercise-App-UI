@@ -1,7 +1,9 @@
 import 'package:exercise_app_ui/constants/constant.dart';
 import 'package:exercise_app_ui/pages/home-page.dart';
 import 'package:exercise_app_ui/widgets/SearchBar.dart';
+import 'package:exercise_app_ui/widgets/SeasonCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({Key key}) : super(key: key);
@@ -14,7 +16,7 @@ class DetailsPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            height: height * 0.5,
+            height: height * 0.55,
             decoration: BoxDecoration(
                 color: kBlueLightColor,
                 image: DecorationImage(
@@ -73,9 +75,42 @@ class DetailsPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * 0.02,
+                    width: width * 0.5,
+                    child: SearchBar()
                   ),
-                  SizedBox(width: width * 0.5, child: SearchBar()),
+                  SizedBox(
+                    height: height * 0.03,
+                  ),
+                  Wrap(
+                    spacing:20,
+                    runSpacing: 20,
+                    children: [
+                      SeasonCard(
+                        seasonNum: 1,
+                        isDone: true,
+                      ),
+                      SeasonCard(
+                        seasonNum: 2,
+                        isDone: true,
+                      ),
+                      SeasonCard(
+                        seasonNum: 3,
+                        isDone: false,
+                      ),
+                      SeasonCard(
+                        seasonNum: 4,
+                        isDone: false,
+                      ),
+                      SeasonCard(
+                        seasonNum: 5,
+                        isDone: true,
+                      ),
+                      SeasonCard(
+                        seasonNum: 6,
+                        isDone: false,
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
