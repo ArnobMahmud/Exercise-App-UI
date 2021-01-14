@@ -1,6 +1,9 @@
-# exercise_app_ui
+# Exercise App UI
 
-A new Flutter project.
+<img src= "https://img.shields.io/badge/License-MIT-critical?style=plastic&logo=appveyor">   &nbsp; [![develop-with-arnob](https://img.shields.io/badge/Develop%20With-Arnob%20Mahmud-9cf?style=plastic&logo=visual-studio-code&labelColor=292844&logoColor=007ACC)](https://github.com/ArnobMahmud/)
+
+![exercise@3x@template](https://user-images.githubusercontent.com/60808266/104572764-49dcb080-567e-11eb-839b-a36e7f7b7ed9.png)
+
 
 ## Getting Started
 
