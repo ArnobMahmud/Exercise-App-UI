@@ -1,4 +1,5 @@
 import 'package:exercise_app_ui/pages/details-page.dart';
+import 'package:exercise_app_ui/pages/diet-details-page.dart';
 import 'package:exercise_app_ui/widgets/BottomNavBar.dart';
 import 'package:exercise_app_ui/widgets/CategoryCard.dart';
 import 'package:exercise_app_ui/widgets/SearchBar.dart';
@@ -94,7 +95,12 @@ class HomePage extends StatelessWidget {
                         CategoryCard(
                           title: "Diet Recommendation",
                           svgSrc: "assets/icons/Hamburger.svg",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DietDetailsPage()));
+                          },
                         ),
                         CategoryCard(
                           title: "Kegel Exercise",
