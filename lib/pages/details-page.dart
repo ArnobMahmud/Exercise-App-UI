@@ -88,26 +88,32 @@ class DetailsPage extends StatelessWidget {
                       SeasonCard(
                         seasonNum: 1,
                         isDone: true,
+                        onPressed: (){},
                       ),
                       SeasonCard(
                         seasonNum: 2,
                         isDone: true,
+                        onPressed: (){},
                       ),
                       SeasonCard(
                         seasonNum: 3,
                         isDone: false,
+                        onPressed: (){},
                       ),
                       SeasonCard(
                         seasonNum: 4,
                         isDone: false,
+                        onPressed: (){},
                       ),
                       SeasonCard(
                         seasonNum: 5,
                         isDone: true,
+                        onPressed: (){},
                       ),
                       SeasonCard(
                         seasonNum: 6,
                         isDone: false,
+                        onPressed: (){},
                       ),
                     ],
                   )

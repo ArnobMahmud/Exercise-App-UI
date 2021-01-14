@@ -30,7 +30,7 @@ class SeasonCard extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () {},
+            onTap: onPressed,
             child: Row(
               children: [
                 Padding(
